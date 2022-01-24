@@ -94,9 +94,9 @@ def home():
 def predict():
 
 	if request.method == 'POST':
-		auther = request.files["Auther's name"]
-		title = request.files["Title of an article"]
-		text = request.files["Text inside the article"]
+		auther = request.form["Auther's name"]
+		title = request.form["Title of an article"]
+		text = request.form["Text inside the article"]
 		total = auther + ' ' + title + ' ' + text
 		cleaned_total = text_cleaner(total)
 		data = [cleaned_total]
