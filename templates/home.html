@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine Learning App with Flask
+		</div>
+		<h2>Fake news classifier</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Auther's name</p>
+		<input type="text" name="Auther's name"/>
+        <p>Title of an article</p> 
+        <input type="text" name="Title of an article" style="width: 1000px;"/>
+        <p>Text inside the article</p>
+
+
+    	<textarea name="text inside the article" rows="15" cols="200"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict" style="margin-top: 20px; width:100px;" />
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
