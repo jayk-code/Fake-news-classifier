@@ -73,7 +73,7 @@ def text_cleaner(text):
     tokens = [w for w in newString.split() if not w in stop_words]
     long_words=[]
     for i in tokens:
-        if len(i)>=3:                  #removing short word
+        if len(i)>=4:                  #removing short word
             long_words.append(lemmatizer.lemmatize(i))   
     return (" ".join(long_words)).strip()
 
